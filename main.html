@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lubomir Vlasev, Mihail Zhekov">
+    <meta name="description" content="Site for the LM Bar owned by lub4o i mi6o. Napraven specialno za iv4o.">
+    <meta name="keywords" content="site, bar, proekt, cafe, caffee, kafene, lm, lmbar">
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>LM-Bar</title>
+</head>
+<body class="no-scroll">
+
+    <header style="position:sticky; top:0; z-index: 30;">
+        <nav>
+            <div style="display:inline-flex;">
+                <a href="main.html" class="nav-text centered-div" style="display:inline-flex;">
+                    <img src="images/LMBar-transparent.png" height="116px;" widht="100px;">
+                    <div class="centered-div">
+                        <h1 class="nav-text" style="font-size:48px;">LM Bar</h1>
+                    </div>
+                </a>
+            </div>
+            <div style="display:inline-flex;" class="centered-div">
+                <div class="search">
+                    <input type="text" class="search-input" placeholder="Search in menu...">
+                    <button type="submit" class="search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <text x="41%" y="50%" font-size="7" font-family="Roboto" text-anchor="middle" fill="transparent">LM</text>
+                            <path d="M10 2c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 14.813c-3.691 0-6.688-2.996-6.688-6.688s2.997-6.688 6.688-6.688c3.691 0 6.688 2.997 6.688 6.688s-2.997 6.688-6.688 6.688z"/>
+                            <path d="M22.56 21.44l-4.667-4.667c-.373-.373-.96-.38-1.345-.023l-1.338 1.336c-.374.374-.38.96-.023 1.345l4.667 4.667c.372.372.961.38 1.345.023l1.338-1.338c.375-.373.38-.961.023-1.343zm-6.842-6.842c-.001-.001-.001-.002-.002-.003-.487-.488-1.281-.488-1.769 0-.488.488-.488 1.28 0 1.768s1.281.488 1.769 0c.001-.001.002-.001.003-.002.486-.488.486-1.282 0-1.763z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>            
+            <div style="display:inline-flex; justify-content: space-between;" class="centered-div">
+                <a href="login.html" style="margin: 0px 10px;">
+                    <button>Log in</button>
+                </a>
+                <a href="register.html" style="margin: 0px 5px;">
+                    <button>Register</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div style="display: inline-flex; width: 100%; min-height: 550px; height:fit-content">
+        <div class="sidebar">
+            <div class="top">
+                <i class="bx bx-menu" id="btn"></i>
+            </div>
+            <ul>
+                <li>
+                    <a href="#top-choices">
+                        <i class="bx bxs-coffee-bean"></i>
+                        <span class="nav-item">Top&nbsp;choices</span>
+                    </a>
+                    <span class="tooltip">Top&nbsp;choices</span>
+                </li>
+                <li>
+                    <a href="menu.html">
+                        <i class="bx bxs-food-menu"></i>
+                        <span class="nav-item">Menu</span>
+                    </a>
+                    <span class="tooltip">Menu</span>
+                </li>
+                <li>
+                    <a href="special.html">
+                        <i><img src="images/kokteil.png" width="45" height="45"></i>
+                        <span class="nav-item">Special</span>
+                    </a>
+                    <span class="tooltip">Special</span>
+                </li>
+                <li>
+                    <a href="#reserve">
+                        <i class="bx bxs-calendar-check"></i>
+                        <span class="nav-item">Reserve</span>
+                    </a>
+                    <span class="tooltip">Reserve</span>
+                </li>
+                <li>
+                    <a href="#about-us">
+                        <i class="bx bxs-error-alt"></i>
+                        <span class="nav-item">About&nbsp;us</span>
+                    </a>
+                    <span class="tooltip">About&nbsp;us</span>
+                </li>
+                <li>
+                    <a href="#contact-us">
+                        <i class="bx bxs-phone"></i>
+                        <span class="nav-item">Contact&nbsp;us</span>
+                    </a>
+                    <span class="tooltip">Contact&nbsp;us</span>
+                </li>
+                <li>
+                    <a href="#settings">
+                        <i class="bx bxs-cog"></i>
+                        <span class="nav-item">Settings</span>
+                    </a>
+                    <span class="tooltip">Settings</span>
+                </li>
+            </ul>
+        </div>
+
+        <main class="main-content" id="main">
+            <div class="centered-div" style="display:block; width: 50%;">
+                <h1 align="center" class="main-text">LMBar</h1>
+                <p style="text-shadow: #000 1px 1px; font-size:x-large;">
+                    Hello and welcome to our website. Here you can view information about the caffee such as top choices and the menu and you can also leave reviews. You can also find more information about the owners as well as our contact information.
+                </p>
+                <div align="center" style="font-size: 48px;" class="waveTextAnimated main-text">
+                    <h1 align="center" style="font-size: 48px;" class="main-text">
+                        Check out the&nbsp;
+                        <a href="menu.html">
+                            <span style="margin-top:40px;">
+                                <span>m</span>
+                                <span>e</span>
+                                <span>n</span>
+                                <span>u</span>
+                                <span>!</span>
+                            </span>
+                        </a>
+                    </h1>
+                </div>
+            </div>
+            <div>
+            </div>
+            <div class="centered-div">
+                <img class="rotating-image" src="images/LMBar-transparent.png" width="519px" height="500px">
+            </div>
+        </main>
+
+    </div>
+
+    <section id="top-choices">
+        <div style="padding:20px; background-color: #a5724e;">
+            <h1 align="center" class="main-text" style="padding:0px; margin:10px; color:rgba(255, 185, 99, 0.6)">Top Choices :]</h1>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/coffee-slide-1.webp" style="width:100%">
+                <div class="text">Cappuccino</div>
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/coffee-slide-3.jpg" style="width:100%">
+                <div class="text">Uh another cappuccino</div>
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/coffee-slide-4.jpg" style="width:100%">
+                <div class="text">Choccy drink</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+        </div>
+    </section>
+
+    <section id="reserve" class="ReservePage">
+        <div class="container">
+            <h1><i>Резервирай сега на достъпна цена </i></h1>
+            <form>
+                <div class="form-group">
+                    <label for="name">Име:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="date-time" >Дата и час:</label>
+                    <input type="datetime-local" id="date-time" name="date-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="num-guests">Брой гости:</label>
+                    <input type="number" id="num-guests" name="num-guests" min="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="vip" class="checkbox-container">
+                        <input type="checkbox" id="vip" name="vip"> 
+                        <span class="checkmark"></span>
+                        <b>V.I.P</b>
+                    </label>
+                </div>
+                
+                <button type="submit">Резервирай</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="about-us" class="aboutUsPage">
+        <div class="zaglavie">
+            <h1 style="margin:0px; font-size:48px;">Най-готините пичове на света</h1>
+            <h1 style="font-size:30px;">Бащите на този сайт</h1>
+            <hr class="hr">
+        </div>
+            <div class="profiles">
+                <div class="lubo" >
+                   <img src="images/lubomir-vlasev.jpg"> 
+                   <h1 style="font-size:30px;"><b>Любомир Власев </b></h1>
+                   <ul style="list-style-type: circle;">
+                    <li><h2>Qk</h2></li>
+                    <li><h2>Stabilen</h2></li>
+                    <li><h2>Silen</h2></li>
+                  </ul>
+                  <div class="rating">
+                    <span class="star" onclick="rateStar(1)">☆</span>
+                    <span class="star" onclick="rateStar(2)">☆</span>
+                    <span class="star" onclick="rateStar(3)">☆</span>
+                    <span class="star" onclick="rateStar(4)">☆</span>
+                    <span class="star" onclick="rateStar(5)">☆</span>
+                </div>
+                </div>
+                <div class="misho">
+                    <img src="images/mihail-zhekov.jpg">
+                    <h1 style="font-size:30px;"><b>Михаил Жеков</b></h1>
+                    <ul style="list-style-type: circle;" >
+                        <li><h2>Qk</h2></li>
+                        <li><h2>Stabilen</h2></li>
+                        <li><h2>Silen</h2></li>
+                      </ul>
+                      <div class="rating2">
+                        <span class="star2" onclick="rateStar2(1)">☆</span>
+                        <span class="star2" onclick="rateStar2(2)">☆</span>
+                        <span class="star2" onclick="rateStar2(3)">☆</span>
+                        <span class="star2" onclick="rateStar2(4)">☆</span>
+                        <span class="star2" onclick="rateStar2(5)">☆</span>
+                    </div>
+                
+                </div>
+               
+            </div>
+            
+    </section>
+
+    <footer id="contact-us">
+        <div class="centered-div" style="color:bisque; display:grid; margin:auto; padding: auto;" >
+            <h1>domain@email.com</h1>
+            <h1>+359 888 696 969</h1>
+            <h1>Trakiq kude drugade</h1>
+            <div style="display:inline-block;">
+                <a href="https://www.instagram.com" target="_blank"><img src="images/instagram-logo.png" width="100" height="100" style="background-color: white; border-radius:80px; margin:10px;"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="images/facebook-logo.png" width="100" height="100" style="background-color: white; border-radius:80px; margin:10px;"></a>
+                <a href="https://www.twitter.com" target="_blank" style="padding:10px; background-color: white; border-radius:80px; margin:10px;" class="centered-div"><img src="images/twitter-logo.png" width="80" height="80" ></a>
+            </div>
+        </div>
+        <div style=" margin:auto; padding: 5vh;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2958.780659224855!2d24.79222087609759!3d42.13357867121481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd13afed87189%3A0x6fca0d7ca4726610!2z0KTQvtGA0YPQvCDQotGA0LDQutC40Y8!5e0!3m2!1sbg!2sbg!4v1701470412936!5m2!1sbg!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>       
+        </div>
+    </footer>
+
+    <script>
+        //#region sidebar
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+
+        btn.onclick = function(){
+            sidebar.classList.toggle('active');
+        }
+        //#endregion
+        
+        //#region carousel
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) 
+            {
+                slideIndex = 1
+            }
+                
+            if (n < 1) 
+            {
+                slideIndex = slides.length
+            }
+
+            for (i = 0; i < slides.length; i++) 
+            {
+                slides[i].style.display = "none";  
+            }
+
+            for (i = 0; i < dots.length; i++) 
+            {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+        //#endregion carousel
+    
+        //#region stars
+        function rateStar(starNum) {
+            const stars = document.querySelectorAll('.star');
+            stars.forEach((star, index,array) => {
+                if (index < starNum) {
+                    star.classList.add('clicked');
+                } else {
+                    star.classList.remove('clicked');
+                }
+            });
+        }
+        function rateStar2(starNum) {
+            const stars = document.querySelectorAll('.star2');
+            stars.forEach((star, index,array) => {
+                if (index < starNum) {
+                    star.classList.add('clicked');
+                } else {
+                    star.classList.remove('clicked');
+                }
+            });
+        }
+        //#endregion stars
+    </script>
+</body>
+</html>

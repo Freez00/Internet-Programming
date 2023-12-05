@@ -1,0 +1,848 @@
+* {
+    box-sizing: border-box;
+}
+
+.no-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scroll {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.loginForm {
+    background-color: rgba(222, 184, 135, 0.9);
+    padding: 10px;
+    padding-top: 3px;
+    border: 5px solid rgb(188, 138, 73, 0.9);
+    margin:auto;
+    margin-left:10vw;
+    margin-top:20vh;
+    width: 30%;
+    min-width: 400px;
+}
+
+.roundCorners {
+    border-radius: 20px;
+}
+
+.loginForm input:not(.checkbox){
+    border-radius: 15px;
+    height: 30px;
+    background-color: antiquewhite;
+    width: 100%;
+    margin:auto;
+    font-size:larger;
+}
+
+.loginPage { 
+    background: url(images/coffee-background.jpg) no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.inputLabelPair {
+    margin: 15px;
+}
+
+.leaveLink{
+    text-decoration: none;
+    width:100%;
+    margin-top: 30px;
+    display:flex;
+}
+
+.leaveLink a {
+    width: 100%;
+    height: 30px;
+    font-size:larger;
+    flex:50%;
+    color: #6A4928;
+    font-weight: bold;
+    text-decoration: none;
+    padding-bottom:4px;
+
+}
+  
+.leaveLink a:hover{
+    transform: scale(1.2);
+    text-decoration: underline;
+}
+
+.loginForm button[type="submit"], nav button:not(.search-button){
+    background-color: antiquewhite;
+    border-radius: 8px;
+    width:100px;
+    height:40px;
+    font-size:medium;
+}
+nav button{
+    background-color: wheat;
+}
+
+.loginForm button[type="submit"]:hover, nav button:hover:not(.search-button:hover){
+    background-color: bisque;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.loginForm button[type="submit"]:focus, nav button:focus:not(.search-button:focus){
+    background:#6A4928;
+    color:wheat;
+}
+
+nav{
+    margin:0;
+    padding:0;
+    background-color: #6A4928;
+    display:inline-flex;
+    width: 100%;
+    top:0;
+    left:0;
+    justify-content: space-between;
+    @media only screen and (width <= 835px) {
+        display: block;
+        min-height: fit-content;
+        height: fit-content;
+    }
+}
+
+footer{
+    margin:0;
+    background-color:#6A4928;
+    display:inline-flex;
+    width:100%;
+    bottom:0;
+    left:0;
+    justify-content: space-between;
+    @media only screen and (width <= 850px) {
+        display: block;
+        min-height: fit-content;
+        height: fit-content;
+    }
+}
+
+nav div {
+    padding:2px 10px;
+    background-color: #6A4928;
+    
+}
+
+.centered-div {
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    justify-items: center;
+    display:flex;
+}
+
+.nav-text{
+    text-decoration: none;
+    color:antiquewhite;
+    font-size:large;
+}
+
+body, section, main, nav, header{
+    padding:0px;
+    margin:0px;
+}
+
+
+#main{
+    background-color:rgb(216, 181, 139);
+    padding:50px;
+    width:100%;
+    min-height:80vh;
+    display:inline-flex;
+    justify-content: space-between;
+    @media only screen and (width <= 850px) {
+        display: block;
+        min-height: fit-content;
+        height: fit-content;
+    }
+}
+
+#menu {
+    background-color:rgb(216, 181, 139);
+    padding:50px;
+    width:100%;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid wheat;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    background-color: antiquewhite;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: rgb(216, 181, 139);
+    border: 1px solid rgb(216, 181, 139);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.search-button:hover{
+    background-color: rgb(181, 144, 100);
+    border-color: rgb(181, 144, 100);
+}
+
+.search-input:focus{
+    border: #1b120a solid 5px;
+    border-right:none;
+}
+.search:has(.search-input:focus) .search-button{
+    border:#1b120a solid 5px;
+    border-left:none;
+}
+
+
+svg {
+    fill: #4e351d;
+    width: 20px;
+    height: 20px;
+}
+
+text {
+    fill: #4e351d;
+}
+
+.sidebar{
+    left:0;
+    min-height:550px;
+    width:80px;
+    background-color: #1b120a;
+    padding: 0.4rem 0.2rem;
+    transition: all 0.5s ease;
+}
+
+.sidebar ul li span{
+    overflow: hidden;
+}
+
+
+.sidebar.active ~ .main-content {
+    left:250px;
+    width: calc(100%-250px);
+}
+
+.sidebar.active{
+    width: 250px;
+}
+
+.sidebar #btn {
+    position:relative;
+    color:antiquewhite;
+    left: 50%;
+    font-size: 2.5rem;
+    line-height:50px;
+    transform: translateX(-50%);
+    cursor:pointer;
+}
+
+.sidebar.active #btn {
+    left:80%;
+}
+
+.sidebar .top .logo{
+    color:#fff;
+    display:flex;
+    height:50px;
+    width:100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar ul{
+    padding: 10px;
+    padding-left:0px;
+}
+
+.sidebar ul li {
+    position:relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem 10%;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    color:#fff;
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius:0.8rem;
+    font-size: 20px;
+    cursor:default;
+    pointer-events: none;
+}
+
+.sidebar ul li a i{
+    cursor: pointer;
+    pointer-events:all;
+}
+
+.sidebar.active ul li a{
+    cursor: pointer;
+    pointer-events:all;
+}
+
+
+.sidebar ul li a i:hover{
+    background-color:antiquewhite;
+    color: #1b120a;
+}
+
+.sidebar.active ul li a:hover {
+    background-color:antiquewhite;
+    color: #1b120a;
+}
+
+.sidebar ul li a i {
+    min-width: 50px;
+    text-align:center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    font-size:24px;
+}
+
+.sidebar .nav-item {
+    opacity: 0;
+}
+
+.sidebar.active .nav-item {
+    opacity: 1;
+}
+
+.sidebar ul li .tooltip {
+    position:absolute;
+    left: 125px;
+    top:50%;
+    transform:translate(-40%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.6rem;
+    padding: 0.4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+    background-color: antiquewhite;
+    color:#1b120a;
+    font-size: 20px;
+    display:none
+}
+
+.sidebar ul li:has(i:hover) .tooltip {
+    opacity: 1;
+    display:flex;
+}
+
+.sidebar.active ul li .tooltip , .sidebar.active ul li:has(i:hover) .tooltip{
+    display:none;
+}
+
+.main-text{
+    font-size:102px;
+    color:#4e351d;
+    text-shadow: #fff 2px 2px, #4e351d 4px 4px;
+}
+
+.main-text a, .main-text a:visited{
+    text-decoration: none;
+    color:#4e351d;
+}
+
+.main-text::selection{
+    color:#fff;
+    text-shadow: #4e351d 2px 2px, #fff 4px 4px;
+    background-color: wheat;
+}
+
+*::selection{
+    color:#fff;
+    text-shadow: #4e351d 2px 2px, #fff 4px 4px;
+    background-color: wheat;
+}
+
+.profiles{
+    display: inline-flex;
+    justify-content: space-between; 
+    width: 90vw;
+
+    @media only screen and (width <= 1000px) {
+        display:block;        
+    }
+}
+
+.waveTextAnimated {
+    font-size: 50px;
+    text-align: center;
+}
+
+.waveTextAnimated span {
+    display: inline-block;
+    -webkit-animation: wave-text 1.5s ease-in-out infinite;
+            animation: wave-text 1.5s ease-in-out infinite;
+  }
+
+  .waveTextAnimated span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .waveTextAnimated span:nth-of-type(2) {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+  }
+  .waveTextAnimated span:nth-of-type(3) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .waveTextAnimated span:nth-of-type(4) {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }  
+  .waveTextAnimated span:nth-of-type(5) {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+
+  @-webkit-keyframes wave-text {
+    00% {
+      transform: translateY(0em);
+    }
+    60% {
+      transform: translateY(-0.6em);
+    }
+    100% {
+      transform: translateY(0em);
+    }
+  }
+   
+  @keyframes wave-text {
+    00% {
+      transform: translateY(0em);
+    }
+    60% {
+      transform: translateY(-0.6em);
+    }
+    100% {
+      transform: translateY(0em);
+    }
+  }
+
+.rotating-image:hover {
+    position: relative;
+    animation: rotateClockwise 1.5s 1 ease-in-out;
+}
+
+@keyframes rotateClockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(78, 53, 29, 0.8) ;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 24px;
+  text-shadow: #1b120a 2px 2px;
+  background-color: rgba(27, 18, 10, 0.8);
+  
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  background-color: rgba(27, 18, 10, 0.8);
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: beige;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active:not(.sidebar), .dot:hover {
+  background-color: rgb(255, 185, 99);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+#top-choices, #reserve, #about-us, #contact-us{
+    scroll-margin-top:140px;
+}
+
+.menu-holder{
+    display:block;
+    padding: 30px;
+}
+
+.menu-holder hr{
+    height: 10px;
+    color:#4e351d;
+    background-color: #4e351d;
+    border-color:#4e351d;
+    box-shadow: #fff 1px 1px, #4e351d 2px 2px;
+    width: 100%;
+    margin-top:70px;
+}
+
+
+.menu-item{
+    width:60vw;
+    margin:15px;
+    display:inline-flex;
+    border: #4e351d 4px solid;
+    box-shadow: #1b120a 7px 10px;
+    background-color: bisque;
+}
+
+.menu-item *{
+    margin:20px;
+}
+
+.menu-item img {
+    width: 160px;
+    height:160px;
+}
+
+.menu-item *::selection{
+    color:beige;
+    background-color: #4e351d;
+    text-shadow: none;
+}
+
+.menu-section-header {
+    padding: 10px 30px;
+    font-size:102px;
+    color:#4e351d;
+    text-shadow: #fff 2px 2px, #4e351d 4px 4px;
+}
+
+.vl {
+    border-left: 6px solid #4e351d;
+    height: 160px;
+}
+
+
+
+/*  astyles.css  */
+
+
+.aboutUsPage {
+    background-color: rgb(216, 181, 139);
+    padding:60px;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: ltr;
+    font-size: 40px;
+    /* Големина на звездите - можеш да промениш според нуждите си */
+}
+
+.rating>span {
+    display: inline-block;
+    position: relative;
+    width: 1em;
+    cursor: pointer;
+    color: #6A4928;
+
+
+}
+
+.rating>span:hover:before,
+.rating>span.clicked:before,
+.rating:hover .clicked:before {
+    content: "\2605";
+    position: absolute;
+    color: #753522;
+}
+
+
+.rating2 {
+    unicode-bidi: bidi-override;
+    direction: ltr;
+    font-size: 40px;
+    /* Големина на звездите - можеш да промениш според нуждите си */
+}
+
+.rating2>span {
+    display: inline-block;
+    position: relative;
+    width: 1em;
+    cursor: pointer;
+    color: #6A4928;
+}
+
+.rating2>span:hover:before,
+.rating2>span.clicked:before,
+.rating2:hover .clicked:before {
+    content: "\2605";
+    position: absolute;
+    color: #753522;
+}
+
+.zaglavie {
+    color: #753522;
+    text-align: center;
+    font-weight: bolder;
+    margin:0px;
+}
+
+.lubo ul {
+    color: #753522;
+    font-weight: bolder;
+}
+
+.misho ul {
+    color: #753522;
+    font-weight: bolder;
+}
+
+.lubo img {
+    width: 400px;
+    height: 600px;
+}
+
+.misho img {
+    width: 300px;
+    height: 600px;
+}
+
+.lubo h1 {
+    color: #753522;
+}
+
+.misho h1 {
+    color: #753522;
+}
+
+.lubo {
+    margin: 5vh 10vw;
+}
+
+.misho {
+    margin: 5vh 10vw;
+}
+
+.hr{
+    height: 5px;
+    background-color: #6A4928;
+    border: none;
+}
+
+
+/* rstyle.css */
+
+.ReservePage {
+    background: url(images/coffee-background-semiblured.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 60vh;
+    padding:80px;
+}
+
+.container h1 {
+    color: wheat;
+    font-size:48px;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    margin-bottom: 1em;
+    font-style: italic;
+    color: wheat;
+    font-size:24px;
+}
+
+.ReservePage label :not(.checkbox) {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.ReservePage input[type="text"],
+.ReservePage input[type="datetime-local"],
+.ReservePage input[type="number"] {
+    width: 100%;
+    height: 40px;
+    font-size:24px;
+    padding: 0.5em;
+    border-radius: 4px;
+    border: 1px solid #ca10103c;
+    background-color: #6A4928;
+    color: wheat;
+    margin-bottom:50px;
+    margin-top:10px;
+}
+
+
+input[type="datetime-local"] {
+    color: wheat;
+}
+
+.ReservePage button {
+    padding: 0.5em 1em;
+    background-color: #6A4928;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-height: 60px;
+    min-width: 200px;
+}
+
+.ReservePage button:hover {
+    background-color: #b30098;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    /* Променя цвета на иконката */
+    color: wheat;
+}
+
+
+/* Стилизация на чекбокса */
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #6A4928;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.checkbox-container:hover input~.checkmark {
+    background-color: #b30098;
+}
+
+.checkbox-container input:checked~.checkmark {
+    background-color: wheat;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid #6A4928;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
